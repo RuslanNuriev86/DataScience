@@ -1,2 +1,2 @@
 # DataScience
-Projects created during passing DataScience course
+Projects created during learning DataScience course
