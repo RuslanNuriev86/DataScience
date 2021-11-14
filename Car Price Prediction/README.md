@@ -1,6 +1,6 @@
 # Cars Price Prediction
 
-## Features
+Dataset contains technical characteristics, complectation and prices of cars. The goal is to learn model for prediction car prices.
 
 ### Data Description
 - DateCrawled - date when add was crawled
