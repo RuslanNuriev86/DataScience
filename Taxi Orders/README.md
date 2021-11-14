@@ -13,10 +13,11 @@ We have a taxi orders data for few monthes of 2018. In porpouse to avoid drivers
 ## Usage
 First of all you should install lightgbm, pystan and fbrophet
 
-
+```
 !pip install lightgbm
 !pip install pystan
 !pip install prophet
+```
 
 ##Requirements
 python 3
