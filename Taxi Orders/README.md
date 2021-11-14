@@ -4,6 +4,8 @@ We have a taxi orders data for few monthes of 2018. In porpouse to avoid drivers
 
 ## Data Description
 
+num_orders - number of orders
+
 ## Models
 - Linear Regression
 - LightGBMRegressor
