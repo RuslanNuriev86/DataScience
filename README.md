@@ -1,2 +1,2 @@
 # DataScience
-Projects created during learning DataScience course
+This repository is mainly contains projects created during learning DataScience course
