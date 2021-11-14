@@ -1,5 +1,5 @@
 # DataScience
-This repository is mainly contains projects created during learning DataScience course
+This repository is mainly contains projects on Python created during learning DataScience course and mostly dedicated to solving real business tasks via Data Preprocessing, Data Analysis, Machine Learning and Statistical Analysis.
 
 ## Project 1
 ### Car Price Prediction
