@@ -12,5 +12,5 @@ First of all you should install transformers, nltk and contractions
 ```
 
 ## Requirements
-python 3
+python 3 <br />
 Also you'll need GPU to make embeddings more faster ;)
