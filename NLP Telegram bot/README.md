@@ -1,9 +1,9 @@
 # NLP Telegram bot
 
-To help DS students learn more about NLP and have fun we need to develop thematic Telegram chat bot. It will answer questions about modern methods of word vectorization such as BERT and GPT3
+To help DS students learn more about NLP and have some fun we need to develop thematic Telegram chat bot. It will answer questions about modern methods of word vectorization such as BERT and GPT3
 
-![image info](C:\Users\Ruslan\Downloads\Screenshot_2021-12-05-20-31-15-280_org.telegram.messenger)
-![title](C:\Users\Ruslan\Downloads\Screenshot_2021-12-05-20-31-15-280_org.telegram.messenger)
+
+<img src="https://user-images.githubusercontent.com/92801594/144756846-270130a6-f82a-4edb-b301-3b0f55a063d2.jpg" img align="left" width="200">
 
 ## Usage
 First of all you should install transformers, tornado and python-telegram-bot
@@ -15,4 +15,5 @@ First of all you should install transformers, tornado and python-telegram-bot
 ```
 
 ## Requirements
-python 3
+python 3<br />
+deepset/roberta-base-squad2 (https://huggingface.co/deepset/roberta-base-squad2)
