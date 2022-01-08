@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS=false; L_NO_TOUCH=false; L_DISABLE_3D=false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.4.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+    <meta name="viewport" content="width=device-width,
+        initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <style>#map_2f4e744fbe554eff94f3c5099fcc326f {
+        position: relative;
+        width: 100.0%;
+        height: 100.0%;
+        left: 0.0%;
+        top: 0.0%;
+        }
+    </style>
+    
+            <style> #vega_327cc77f0dcd4b5f9eebffbcb6a4e792 {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vega/1.4.3/vega.min.js"></script>
+    
+            <style> #vega_4145eef7d0324a218f379686c8459ac6 {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_e563c677a4e64acba07c0b0d989112d9 {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_a710d60eedf54f8d9d2bebd56bc096a0 {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_f9a0dd2e6a894835bf39557f98ecbbc2 {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_3a0623d12c1e46f39549230089c8df7a {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_95526aa257864961a98f02fa630b3baa {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_aa157905a06941778d2c40e9c59a8b74 {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_89e3fc00b52f431e808f713b37b15c79 {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+</head>
+<body>    
+    
+             <h3 align="center" style="font-size:16px"><b>Air quality monitoring map of Moscow</b></h3>
+             
+    
+    <div class="folium-map" id="map_2f4e744fbe554eff94f3c5099fcc326f" ></div>
+</body>
+<script>    
+    
+    
+        var bounds = null;
+    
+
+    var map_2f4e744fbe554eff94f3c5099fcc326f = L.map(
+        'map_2f4e744fbe554eff94f3c5099fcc326f', {
+        center: [55.82, 37.525],
+        zoom: 10,
+        maxBounds: bounds,
+        layers: [],
+        worldCopyJump: false,
+        crs: L.CRS.EPSG3857,
+        zoomControl: true,
+        });
+
+
+    
+    var tile_layer_2944fb45ba404f1b8e7e7dd36a290886 = L.tileLayer(
+        'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+        {
+        "attribution": null,
+        "detectRetina": false,
+        "maxNativeZoom": 18,
+        "maxZoom": 18,
+        "minZoom": 0,
+        "noWrap": false,
+        "opacity": 1,
+        "subdomains": "abc",
+        "tms": false
+}).addTo(map_2f4e744fbe554eff94f3c5099fcc326f);
+    
+        var marker_3ad05343d34f4a518d246dc45242c1ba = L.marker(
+            [55.658163, 37.471434],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(map_2f4e744fbe554eff94f3c5099fcc326f);
+        
+    
+
+                var icon_2f8e738e3ece4692bafe0fde7f123418 = L.AwesomeMarkers.icon({
+                    icon: 'cloud',
+                    iconColor: 'white',
+                    markerColor: 'darkblue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_3ad05343d34f4a518d246dc45242c1ba.setIcon(icon_2f8e738e3ece4692bafe0fde7f123418);
+            
+    
+        marker_3ad05343d34f4a518d246dc45242c1ba.bindTooltip(
+            `<div>`
+            + `Academic Anokhin St.` + `</div>`,
+            {"sticky": true}
+        );
+        
+    function vega_parse(spec, div) {
+            vg.parse.spec(spec, function(chart) { chart({el:div}).update(); });}
+    
+            var popup_e24b06d958754813b6cfca2546a80243 = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_428805bd773d497981cf5848b2323ead = $(`<div id="html_428805bd773d497981cf5848b2323ead" style="width: 100.0%; height: 100.0%;">Hello</div>`)[0];
+                popup_e24b06d958754813b6cfca2546a80243.setContent(html_428805bd773d497981cf5848b2323ead);
+            
+                var vega_327cc77f0dcd4b5f9eebffbcb6a4e792 = $(`             <div id="vega_327cc77f0dcd4b5f9eebffbcb6a4e792"></div>             `)[0];
+                popup_e24b06d958754813b6cfca2546a80243.setContent(vega_327cc77f0dcd4b5f9eebffbcb6a4e792);
+            
+
+            marker_3ad05343d34f4a518d246dc45242c1ba.bindPopup(popup_e24b06d958754813b6cfca2546a80243)
+            ;
+
+            
+                
+            vega_parse({"axes": [{"scale": "x", "title": "hours", "type": "x"}, {"scale": "y", "title": "concentration", "type": "y"}], "data": [{"name": "table", "values": [{"col": "NO2", "idx": 0, "val": 0.07960020736349578}, {"col": "CO", "idx": 0, "val": 0.9288060602630406}, {"col": "PM2.5", "idx": 0, "val": 0.04880284294561416}, {"col": "NO", "idx": 0, "val": 0.005987230584305614}, {"col": "NO2", "idx": 1, "val": 0.07908469581554649}, {"col": "CO", "idx": 1, "val": 0.926370495916506}, {"col": "PM2.5", "idx": 1, "val": 0.0399092215210298}, {"col": "NO", "idx": 1, "val": 0.005198424476435918}, {"col": "NO2", "idx": 2, "val": 0.0786442832245297}, {"col": "CO", "idx": 2, "val": 0.946042041899164}, {"col": "PM2.5", "idx": 2, "val": 0.04623421652268342}, {"col": "NO", "idx": 2, "val": 0.0047181432271580425}, {"col": "NO2", "idx": 3, "val": 0.06261425375998148}, {"col": "CO", "idx": 3, "val": 0.8210244547137148}, {"col": "PM2.5", "idx": 3, "val": 0.04940699205983433}, {"col": "NO", "idx": 3, "val": 0.004996323563911329}, {"col": "NO2", "idx": 4, "val": 0.05244147672607266}, {"col": "CO", "idx": 4, "val": 0.6909083850984842}, {"col": "PM2.5", "idx": 4, "val": 0.049877458192876784}, {"col": "NO", "idx": 4, "val": 0.0025350966302486013}, {"col": "NO2", "idx": 5, "val": 0.05774817435259549}, {"col": "CO", "idx": 5, "val": 0.6310034891314327}, {"col": "PM2.5", "idx": 5, "val": 0.042083638568203394}, {"col": "NO", "idx": 5, "val": 0.0035706264406708908}, {"col": "NO2", "idx": 6, "val": 0.053843875563673566}, {"col": "CO", "idx": 6, "val": 0.6300770953468258}, {"col": "PM2.5", "idx": 6, "val": 0.04008716419305973}, {"col": "NO", "idx": 6, "val": 0.003937770522318572}, {"col": "NO2", "idx": 7, "val": 0.0652681408239158}, {"col": "CO", "idx": 7, "val": 0.6410876118816479}, {"col": "PM2.5", "idx": 7, "val": 0.031951501320311174}, {"col": "NO", "idx": 7, "val": 0.006556926607252551}, {"col": "NO2", "idx": 8, "val": 0.06532488798702267}, {"col": "CO", "idx": 8, "val": 0.6616769088935863}, {"col": "PM2.5", "idx": 8, "val": 0.03158391081062478}, {"col": "NO", "idx": 8, "val": 0.007598980212857014}, {"col": "NO2", "idx": 9, "val": 0.08046589119113985}, {"col": "CO", "idx": 9, "val": 0.9046840554777398}, {"col": "PM2.5", "idx": 9, "val": 0.03700884450439937}, {"col": "NO", "idx": 9, "val": 0.0308807779234469}, {"col": "NO2", "idx": 10, "val": 0.09883779990877664}, {"col": "CO", "idx": 10, "val": 0.965621792906798}, {"col": "PM2.5", "idx": 10, "val": 0.045520804478868936}, {"col": "NO", "idx": 10, "val": 0.06096594794547795}, {"col": "NO2", "idx": 11, "val": 0.07926635164763683}, {"col": "CO", "idx": 11, "val": 0.9638177390866192}, {"col": "PM2.5", "idx": 11, "val": 0.045215485008606816}, {"col": "NO", "idx": 11, "val": 0.040253429209572575}, {"col": "NO2", "idx": 12, "val": 0.0800384804228932}, {"col": "CO", "idx": 12, "val": 1.1967477265710649}, {"col": "PM2.5", "idx": 12, "val": 0.045268538668472115}, {"col": "NO", "idx": 12, "val": 0.026959266613587097}]}, {"name": "stats", "source": "table", "transform": [{"keys": ["data.idx"], "type": "facet"}, {"type": "stats", "value": "data.val"}]}], "height": 200, "legends": [{"fill": "color", "offset": 0, "properties": {}, "title": "Indicators Day Forcast"}], "marks": [{"from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}, {"height": "data.val", "point": "data.idx", "type": "stack"}]}, "marks": [{"properties": {"enter": {"fill": {"field": "data.col", "scale": "color"}, "width": {"band": true, "offset": -1, "scale": "x"}, "x": {"field": "data.idx", "scale": "x"}, "y": {"field": "y", "scale": "y"}, "y2": {"field": "y2", "scale": "y"}}}, "type": "rect"}], "type": "group"}], "padding": "auto", "scales": [{"domain": {"data": "table", "field": "data.idx"}, "name": "x", "range": "width", "type": "ordinal", "zero": false}, {"domain": {"data": "stats", "field": "sum"}, "name": "y", "nice": true, "range": "height"}, {"domain": {"data": "table", "field": "data.col"}, "name": "color", "range": "category20", "type": "ordinal"}], "width": 400},vega_327cc77f0dcd4b5f9eebffbcb6a4e792);
+            
+            
+        
+    
+        var marker_7bf488191e4d4d29808404590d8179fd = L.marker(
+            [55.833222, 37.52515800000001],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(map_2f4e744fbe554eff94f3c5099fcc326f);
+        
+    
+
+                var icon_e4c91fedb9154e6ea0bd437a127e8edd = L.AwesomeMarkers.icon({
+                    icon: 'cloud',
+                    iconColor: 'white',
+                    markerColor: 'darkblue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_7bf488191e4d4d29808404590d8179fd.setIcon(icon_e4c91fedb9154e6ea0bd437a127e8edd);
+            
+    
+        marker_7bf488191e4d4d29808404590d8179fd.bindTooltip(
+            `<div>`
+            + `Koptevskiy Blvd.` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+            var popup_f4d819c8f843458fbf61dc6b3ffbeeed = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_5aee635a5c0c440495c6a451347b0078 = $(`<div id="html_5aee635a5c0c440495c6a451347b0078" style="width: 100.0%; height: 100.0%;">Hello</div>`)[0];
+                popup_f4d819c8f843458fbf61dc6b3ffbeeed.setContent(html_5aee635a5c0c440495c6a451347b0078);
+            
+                var vega_4145eef7d0324a218f379686c8459ac6 = $(`             <div id="vega_4145eef7d0324a218f379686c8459ac6"></div>             `)[0];
+                popup_f4d819c8f843458fbf61dc6b3ffbeeed.setContent(vega_4145eef7d0324a218f379686c8459ac6);
+            
+
+            marker_7bf488191e4d4d29808404590d8179fd.bindPopup(popup_f4d819c8f843458fbf61dc6b3ffbeeed)
+            ;
+
+            
+                
+            vega_parse({"axes": [{"scale": "x", "title": "hours", "type": "x"}, {"scale": "y", "title": "concentration", "type": "y"}], "data": [{"name": "table", "values": [{"col": "NO2", "idx": 0, "val": 0.09819635864187687}, {"col": "CO", "idx": 0, "val": 0.2907074042448583}, {"col": "PM2.5", "idx": 0, "val": 0.06080204436155483}, {"col": "NO", "idx": 0, "val": 0.044126950982304014}, {"col": "NO2", "idx": 1, "val": 0.09842882393837724}, {"col": "CO", "idx": 1, "val": 0.2273440595812764}, {"col": "PM2.5", "idx": 1, "val": 0.06037696765991754}, {"col": "NO", "idx": 1, "val": 0.024784489137400518}, {"col": "NO2", "idx": 2, "val": 0.08384596182679847}, {"col": "CO", "idx": 2, "val": 0.2964171332191305}, {"col": "PM2.5", "idx": 2, "val": 0.04797085065829683}, {"col": "NO", "idx": 2, "val": 0.014789604114220466}, {"col": "NO2", "idx": 3, "val": 0.08425036156285938}, {"col": "CO", "idx": 3, "val": -0.005802762211830181}, {"col": "PM2.5", "idx": 3, "val": 0.04747290699135452}, {"col": "NO", "idx": 3, "val": 0.006674909160258495}, {"col": "NO2", "idx": 4, "val": 0.08915616082543573}, {"col": "CO", "idx": 4, "val": -0.005428981955625023}, {"col": "PM2.5", "idx": 4, "val": 0.06418921711817306}, {"col": "NO", "idx": 4, "val": 0.007715345780784554}, {"col": "NO2", "idx": 5, "val": 0.08852052908520136}, {"col": "CO", "idx": 5, "val": 0.008166437146062133}, {"col": "PM2.5", "idx": 5, "val": 0.060952895321199775}, {"col": "NO", "idx": 5, "val": 0.008996886180535941}, {"col": "NO2", "idx": 6, "val": 0.08783845018575631}, {"col": "CO", "idx": 6, "val": 0.010731231773074446}, {"col": "PM2.5", "idx": 6, "val": 0.05411518948670036}, {"col": "NO", "idx": 6, "val": 0.017668441728794733}, {"col": "NO2", "idx": 7, "val": 0.10225724002214387}, {"col": "CO", "idx": 7, "val": 0.3159839544099205}, {"col": "PM2.5", "idx": 7, "val": 0.04606744156655362}, {"col": "NO", "idx": 7, "val": 0.021004806829919755}, {"col": "NO2", "idx": 8, "val": 0.0981570748713144}, {"col": "CO", "idx": 8, "val": 0.3176657445032357}, {"col": "PM2.5", "idx": 8, "val": 0.04744604939710319}, {"col": "NO", "idx": 8, "val": 0.031747009991631325}, {"col": "NO2", "idx": 9, "val": 0.09705312496121886}, {"col": "CO", "idx": 9, "val": 0.3167079009300585}, {"col": "PM2.5", "idx": 9, "val": 0.035810107947115664}, {"col": "NO", "idx": 9, "val": 0.026626448184650826}, {"col": "NO2", "idx": 10, "val": 0.09649092760254872}, {"col": "CO", "idx": 10, "val": 0.4888822245476507}, {"col": "PM2.5", "idx": 10, "val": 0.04272700604248829}, {"col": "NO", "idx": 10, "val": 0.026577287912415072}, {"col": "NO2", "idx": 11, "val": 0.11935535095040575}, {"col": "CO", "idx": 11, "val": 0.4757944151178202}, {"col": "PM2.5", "idx": 11, "val": 0.04747434694289564}, {"col": "NO", "idx": 11, "val": 0.06835009428535394}]}, {"name": "stats", "source": "table", "transform": [{"keys": ["data.idx"], "type": "facet"}, {"type": "stats", "value": "data.val"}]}], "height": 200, "legends": [{"fill": "color", "offset": 0, "properties": {}, "title": "Indicators Day Forcast"}], "marks": [{"from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}, {"height": "data.val", "point": "data.idx", "type": "stack"}]}, "marks": [{"properties": {"enter": {"fill": {"field": "data.col", "scale": "color"}, "width": {"band": true, "offset": -1, "scale": "x"}, "x": {"field": "data.idx", "scale": "x"}, "y": {"field": "y", "scale": "y"}, "y2": {"field": "y2", "scale": "y"}}}, "type": "rect"}], "type": "group"}], "padding": "auto", "scales": [{"domain": {"data": "table", "field": "data.idx"}, "name": "x", "range": "width", "type": "ordinal", "zero": false}, {"domain": {"data": "stats", "field": "sum"}, "name": "y", "nice": true, "range": "height"}, {"domain": {"data": "table", "field": "data.col"}, "name": "color", "range": "category20", "type": "ordinal"}], "width": 400},vega_4145eef7d0324a218f379686c8459ac6);
+            
+            
+        
+    
+        var marker_a40b50c52dfe4687b5ec0d2ff12801a8 = L.marker(
+            [55.856324, 37.426628],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(map_2f4e744fbe554eff94f3c5099fcc326f);
+        
+    
+
+                var icon_550d444f82ee49e3a1574bb3741f78b1 = L.AwesomeMarkers.icon({
+                    icon: 'cloud',
+                    iconColor: 'white',
+                    markerColor: 'darkblue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_a40b50c52dfe4687b5ec0d2ff12801a8.setIcon(icon_550d444f82ee49e3a1574bb3741f78b1);
+            
+    
+        marker_a40b50c52dfe4687b5ec0d2ff12801a8.bindTooltip(
+            `<div>`
+            + `Turistskaya St.` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+            var popup_bfeabc868f644c8e8719679777e21b49 = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_3cb7e86ae0b541f9953262437beeeefc = $(`<div id="html_3cb7e86ae0b541f9953262437beeeefc" style="width: 100.0%; height: 100.0%;">Hello</div>`)[0];
+                popup_bfeabc868f644c8e8719679777e21b49.setContent(html_3cb7e86ae0b541f9953262437beeeefc);
+            
+                var vega_e563c677a4e64acba07c0b0d989112d9 = $(`             <div id="vega_e563c677a4e64acba07c0b0d989112d9"></div>             `)[0];
+                popup_bfeabc868f644c8e8719679777e21b49.setContent(vega_e563c677a4e64acba07c0b0d989112d9);
+            
+
+            marker_a40b50c52dfe4687b5ec0d2ff12801a8.bindPopup(popup_bfeabc868f644c8e8719679777e21b49)
+            ;
+
+            
+                
+            vega_parse({"axes": [{"scale": "x", "title": "hours", "type": "x"}, {"scale": "y", "title": "concentration", "type": "y"}], "data": [{"name": "table", "values": [{"col": "CO", "idx": 0, "val": 0.9073540748276692}, {"col": "NO2", "idx": 0, "val": 0.07770453351530601}, {"col": "PM10", "idx": 0, "val": 2.5178490889454785e-10}, {"col": "PM2.5", "idx": 0, "val": 0.048951630566152114}, {"col": "NO", "idx": 0, "val": 0.05759101231781065}, {"col": "CO", "idx": 1, "val": 0.9033810184102288}, {"col": "NO2", "idx": 1, "val": 0.07579089866520089}, {"col": "PM10", "idx": 1, "val": 2.5178490889454785e-10}, {"col": "PM2.5", "idx": 1, "val": 0.05454611319665308}, {"col": "NO", "idx": 1, "val": 0.02970782278556596}, {"col": "CO", "idx": 2, "val": 0.9149755544792646}, {"col": "NO2", "idx": 2, "val": 0.07851682889984532}, {"col": "PM10", "idx": 2, "val": 2.5178490889454785e-10}, {"col": "PM2.5", "idx": 2, "val": 0.04974145642971718}, {"col": "NO", "idx": 2, "val": 0.016078504953374796}, {"col": "CO", "idx": 3, "val": 0.604692892694846}, {"col": "NO2", "idx": 3, "val": 0.07925302267362294}, {"col": "PM10", "idx": 3, "val": 2.5178490889454785e-10}, {"col": "PM2.5", "idx": 3, "val": 0.0478244007500324}, {"col": "NO", "idx": 3, "val": 0.01057083218548152}, {"col": "CO", "idx": 4, "val": 0.6168761958780895}, {"col": "NO2", "idx": 4, "val": 0.07979686840906595}, {"col": "PM10", "idx": 4, "val": 2.5178490889454785e-10}, {"col": "PM2.5", "idx": 4, "val": 0.049653469208708965}, {"col": "NO", "idx": 4, "val": 0.008797809932187827}, {"col": "CO", "idx": 5, "val": 0.6120336070862403}, {"col": "NO2", "idx": 5, "val": 0.08137152802944668}, {"col": "PM10", "idx": 5, "val": 2.5178490889454785e-10}, {"col": "PM2.5", "idx": 5, "val": 0.05084472524180443}, {"col": "NO", "idx": 5, "val": 0.008886776152158465}, {"col": "CO", "idx": 6, "val": 0.6071977387736539}, {"col": "NO2", "idx": 6, "val": 0.08351345219112719}, {"col": "PM10", "idx": 6, "val": 2.5178490889454785e-10}, {"col": "PM2.5", "idx": 6, "val": 0.04924244788456718}, {"col": "NO", "idx": 6, "val": 0.014818079772597494}, {"col": "CO", "idx": 7, "val": 0.7248445568819029}, {"col": "NO2", "idx": 7, "val": 0.08004213074604652}, {"col": "PM10", "idx": 7, "val": 2.5178490889454785e-10}, {"col": "PM2.5", "idx": 7, "val": 0.04924244788456718}, {"col": "NO", "idx": 7, "val": 0.01534753488306456}, {"col": "CO", "idx": 8, "val": 0.7253885606325297}, {"col": "NO2", "idx": 8, "val": 0.09624796060198927}, {"col": "PM10", "idx": 8, "val": 2.5178490889454785e-10}, {"col": "PM2.5", "idx": 8, "val": 0.042097742336662455}, {"col": "NO", "idx": 8, "val": 0.02845963238114883}, {"col": "CO", "idx": 9, "val": 0.935948652295586}, {"col": "NO2", "idx": 9, "val": 0.09598599798352392}, {"col": "PM10", "idx": 9, "val": 2.5178490889454785e-10}, {"col": "PM2.5", "idx": 9, "val": 0.03630280542697048}, {"col": "NO", "idx": 9, "val": 0.028545440627422806}, {"col": "CO", "idx": 10, "val": 0.9164131829889404}, {"col": "NO2", "idx": 10, "val": 0.0936681615197589}, {"col": "PM10", "idx": 10, "val": 2.5178490889454785e-10}, {"col": "PM2.5", "idx": 10, "val": 0.04073129743458365}, {"col": "NO", "idx": 10, "val": 0.04522464365487966}, {"col": "CO", "idx": 11, "val": 1.177589944408957}, {"col": "NO2", "idx": 11, "val": 0.07876894912589605}, {"col": "PM10", "idx": 11, "val": 2.5178490889454785e-10}, {"col": "PM2.5", "idx": 11, "val": 0.049100327858992376}, {"col": "NO", "idx": 11, "val": 0.052888183091047855}]}, {"name": "stats", "source": "table", "transform": [{"keys": ["data.idx"], "type": "facet"}, {"type": "stats", "value": "data.val"}]}], "height": 200, "legends": [{"fill": "color", "offset": 0, "properties": {}, "title": "Indicators Day Forcast"}], "marks": [{"from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}, {"height": "data.val", "point": "data.idx", "type": "stack"}]}, "marks": [{"properties": {"enter": {"fill": {"field": "data.col", "scale": "color"}, "width": {"band": true, "offset": -1, "scale": "x"}, "x": {"field": "data.idx", "scale": "x"}, "y": {"field": "y", "scale": "y"}, "y2": {"field": "y2", "scale": "y"}}}, "type": "rect"}], "type": "group"}], "padding": "auto", "scales": [{"domain": {"data": "table", "field": "data.idx"}, "name": "x", "range": "width", "type": "ordinal", "zero": false}, {"domain": {"data": "stats", "field": "sum"}, "name": "y", "nice": true, "range": "height"}, {"domain": {"data": "table", "field": "data.col"}, "name": "color", "range": "category20", "type": "ordinal"}], "width": 400},vega_e563c677a4e64acba07c0b0d989112d9);
+            
+            
+        
+    
+        var marker_7f1b4ce77fc540fda34e2816a31b5a62 = L.marker(
+            [55.759354, 37.595584],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(map_2f4e744fbe554eff94f3c5099fcc326f);
+        
+    
+
+                var icon_6f8ad89d89464ec2b184580a57346087 = L.AwesomeMarkers.icon({
+                    icon: 'cloud',
+                    iconColor: 'white',
+                    markerColor: 'darkblue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_7f1b4ce77fc540fda34e2816a31b5a62.setIcon(icon_6f8ad89d89464ec2b184580a57346087);
+            
+    
+        marker_7f1b4ce77fc540fda34e2816a31b5a62.bindTooltip(
+            `<div>`
+            + `Spiridonovka St.` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+            var popup_f1fda5855e2c442bb686510c01d74dfc = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_9ed854a2122445908784833f4dc104db = $(`<div id="html_9ed854a2122445908784833f4dc104db" style="width: 100.0%; height: 100.0%;">Hello</div>`)[0];
+                popup_f1fda5855e2c442bb686510c01d74dfc.setContent(html_9ed854a2122445908784833f4dc104db);
+            
+                var vega_a710d60eedf54f8d9d2bebd56bc096a0 = $(`             <div id="vega_a710d60eedf54f8d9d2bebd56bc096a0"></div>             `)[0];
+                popup_f1fda5855e2c442bb686510c01d74dfc.setContent(vega_a710d60eedf54f8d9d2bebd56bc096a0);
+            
+
+            marker_7f1b4ce77fc540fda34e2816a31b5a62.bindPopup(popup_f1fda5855e2c442bb686510c01d74dfc)
+            ;
+
+            
+                
+            vega_parse({"axes": [{"scale": "x", "title": "hours", "type": "x"}, {"scale": "y", "title": "concentration", "type": "y"}], "data": [{"name": "table", "values": [{"col": "CO", "idx": 0, "val": 0.34799868073032136}, {"col": "NO2", "idx": 0, "val": 0.08944729297019366}, {"col": "PM10", "idx": 0, "val": 0.06846779127835244}, {"col": "PM2.5", "idx": 0, "val": 0.045491008707773714}, {"col": "NO", "idx": 0, "val": 0.06501022308548746}, {"col": "CO", "idx": 1, "val": 0.3262039081614312}, {"col": "NO2", "idx": 1, "val": 0.08589849569649692}, {"col": "PM10", "idx": 1, "val": 0.05743693554936116}, {"col": "PM2.5", "idx": 1, "val": 0.04247289680278586}, {"col": "NO", "idx": 1, "val": 0.03522542735280484}, {"col": "CO", "idx": 2, "val": 0.5823797559703612}, {"col": "NO2", "idx": 2, "val": 0.08711479039184797}, {"col": "PM10", "idx": 2, "val": 0.05886647946263202}, {"col": "PM2.5", "idx": 2, "val": 0.04176432221632699}, {"col": "NO", "idx": 2, "val": 0.03201630562983066}, {"col": "CO", "idx": 3, "val": 0.3773939674440003}, {"col": "NO2", "idx": 3, "val": 0.07728948012029965}, {"col": "PM10", "idx": 3, "val": 0.05958321042209305}, {"col": "PM2.5", "idx": 3, "val": 0.04495017333413398}, {"col": "NO", "idx": 3, "val": 0.028448015305028124}, {"col": "CO", "idx": 4, "val": 0.32230110107313026}, {"col": "NO2", "idx": 4, "val": 0.08034941710168109}, {"col": "PM10", "idx": 4, "val": 0.07174672005016626}, {"col": "PM2.5", "idx": 4, "val": 0.04502281952427525}, {"col": "NO", "idx": 4, "val": 0.01471949751682584}, {"col": "CO", "idx": 5, "val": 0.3216429131765792}, {"col": "NO2", "idx": 5, "val": 0.08443693605996358}, {"col": "PM10", "idx": 5, "val": 0.07171095873962699}, {"col": "PM2.5", "idx": 5, "val": 0.0418212641631934}, {"col": "NO", "idx": 5, "val": 0.0323065319195477}, {"col": "CO", "idx": 6, "val": 0.326148571028728}, {"col": "NO2", "idx": 6, "val": 0.09078599722661536}, {"col": "PM10", "idx": 6, "val": 0.06026691653495349}, {"col": "PM2.5", "idx": 6, "val": 0.038465155864689474}, {"col": "NO", "idx": 6, "val": 0.021506526263146745}, {"col": "CO", "idx": 7, "val": 0.11812803917642455}, {"col": "NO2", "idx": 7, "val": 0.09043125925382313}, {"col": "PM10", "idx": 7, "val": 0.060054579263223676}, {"col": "PM2.5", "idx": 7, "val": 0.03844995325050882}, {"col": "NO", "idx": 7, "val": 0.0351243490166521}, {"col": "CO", "idx": 8, "val": 0.0358136520147011}, {"col": "NO2", "idx": 8, "val": 0.08903787724987228}, {"col": "PM10", "idx": 8, "val": 0.045635061284985165}, {"col": "PM2.5", "idx": 8, "val": 0.0317565383574568}, {"col": "NO", "idx": 8, "val": 0.032673667052040015}, {"col": "CO", "idx": 9, "val": 0.3918174133197369}, {"col": "NO2", "idx": 9, "val": 0.10330268055037367}, {"col": "PM10", "idx": 9, "val": 0.047594152336665085}, {"col": "PM2.5", "idx": 9, "val": 0.03875786653355225}, {"col": "NO", "idx": 9, "val": 0.03434560962782403}, {"col": "CO", "idx": 10, "val": 0.6107787705404311}, {"col": "NO2", "idx": 10, "val": 0.10079848238834113}, {"col": "PM10", "idx": 10, "val": 0.06061614108152288}, {"col": "PM2.5", "idx": 10, "val": 0.03890377416410573}, {"col": "NO", "idx": 10, "val": 0.03392977613500972}, {"col": "CO", "idx": 11, "val": 0.6111707899136135}, {"col": "NO2", "idx": 11, "val": 0.10382366827282366}, {"col": "PM10", "idx": 11, "val": 0.07252698613014003}, {"col": "PM2.5", "idx": 11, "val": 0.042091220329773416}, {"col": "NO", "idx": 11, "val": 0.06888156993604476}]}, {"name": "stats", "source": "table", "transform": [{"keys": ["data.idx"], "type": "facet"}, {"type": "stats", "value": "data.val"}]}], "height": 200, "legends": [{"fill": "color", "offset": 0, "properties": {}, "title": "Indicators Day Forcast"}], "marks": [{"from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}, {"height": "data.val", "point": "data.idx", "type": "stack"}]}, "marks": [{"properties": {"enter": {"fill": {"field": "data.col", "scale": "color"}, "width": {"band": true, "offset": -1, "scale": "x"}, "x": {"field": "data.idx", "scale": "x"}, "y": {"field": "y", "scale": "y"}, "y2": {"field": "y2", "scale": "y"}}}, "type": "rect"}], "type": "group"}], "padding": "auto", "scales": [{"domain": {"data": "table", "field": "data.idx"}, "name": "x", "range": "width", "type": "ordinal", "zero": false}, {"domain": {"data": "stats", "field": "sum"}, "name": "y", "nice": true, "range": "height"}, {"domain": {"data": "table", "field": "data.col"}, "name": "color", "range": "category20", "type": "ordinal"}], "width": 400},vega_a710d60eedf54f8d9d2bebd56bc096a0);
+            
+            
+        
+    
+        var marker_10c134baec4743bf81dc1c98f82cb0ee = L.marker(
+            [55.811801, 37.71249],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(map_2f4e744fbe554eff94f3c5099fcc326f);
+        
+    
+
+                var icon_570e54a1049047beb6977448d8cec231 = L.AwesomeMarkers.icon({
+                    icon: 'cloud',
+                    iconColor: 'white',
+                    markerColor: 'darkblue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_10c134baec4743bf81dc1c98f82cb0ee.setIcon(icon_570e54a1049047beb6977448d8cec231);
+            
+    
+        marker_10c134baec4743bf81dc1c98f82cb0ee.bindTooltip(
+            `<div>`
+            + `Glebovskaya St.` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+            var popup_7effdb42cd794df1bc9826962e17b17a = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_fc9bfb949f2c4d62b444df7ce15aca7a = $(`<div id="html_fc9bfb949f2c4d62b444df7ce15aca7a" style="width: 100.0%; height: 100.0%;">Hello</div>`)[0];
+                popup_7effdb42cd794df1bc9826962e17b17a.setContent(html_fc9bfb949f2c4d62b444df7ce15aca7a);
+            
+                var vega_f9a0dd2e6a894835bf39557f98ecbbc2 = $(`             <div id="vega_f9a0dd2e6a894835bf39557f98ecbbc2"></div>             `)[0];
+                popup_7effdb42cd794df1bc9826962e17b17a.setContent(vega_f9a0dd2e6a894835bf39557f98ecbbc2);
+            
+
+            marker_10c134baec4743bf81dc1c98f82cb0ee.bindPopup(popup_7effdb42cd794df1bc9826962e17b17a)
+            ;
+
+            
+                
+            vega_parse({"axes": [{"scale": "x", "title": "hours", "type": "x"}, {"scale": "y", "title": "concentration", "type": "y"}], "data": [{"name": "table", "values": [{"col": "CO", "idx": 0, "val": 0.7634100420997401}, {"col": "NO2", "idx": 0, "val": 0.006995657200292695}, {"col": "PM10", "idx": 0, "val": 0.0028486167009160322}, {"col": "PM25", "idx": 0, "val": 0.002705234667250669}, {"col": "NO", "idx": 0, "val": 0.0008382399579470733}, {"col": "CO", "idx": 1, "val": 0.8728430157896393}, {"col": "NO2", "idx": 1, "val": 0.006682874474418918}, {"col": "PM10", "idx": 1, "val": 0.0028486167009160322}, {"col": "PM25", "idx": 1, "val": 0.002754814107785025}, {"col": "NO", "idx": 1, "val": 0.0008382399579470733}, {"col": "CO", "idx": 2, "val": 0.7527979227706323}, {"col": "NO2", "idx": 2, "val": 0.004154396539816078}, {"col": "PM10", "idx": 2, "val": 0.0036565194370558884}, {"col": "PM25", "idx": 2, "val": 0.002754814107785025}, {"col": "NO", "idx": 2, "val": 0.0008382399579470733}, {"col": "CO", "idx": 3, "val": 0.5918565877790073}, {"col": "NO2", "idx": 3, "val": 0.0041398388148846735}, {"col": "PM10", "idx": 3, "val": 0.0036565194370558884}, {"col": "PM25", "idx": 3, "val": 0.0026152880089057515}, {"col": "NO", "idx": 3, "val": 0.0009798089035161998}, {"col": "CO", "idx": 4, "val": 0.5990807716797233}, {"col": "NO2", "idx": 4, "val": 0.003787837319673547}, {"col": "PM10", "idx": 4, "val": 0.00319508512809219}, {"col": "PM25", "idx": 4, "val": 0.002744046772386877}, {"col": "NO", "idx": 4, "val": 0.0008000999723325637}, {"col": "CO", "idx": 5, "val": 0.5991516935169542}, {"col": "NO2", "idx": 5, "val": 0.004376624524256335}, {"col": "PM10", "idx": 5, "val": 0.00319508512809219}, {"col": "PM25", "idx": 5, "val": 0.002705234667250669}, {"col": "NO", "idx": 5, "val": 0.0006869517117769515}, {"col": "CO", "idx": 6, "val": 0.6003176095335169}, {"col": "NO2", "idx": 6, "val": 0.0039226388462288925}, {"col": "PM10", "idx": 6, "val": 0.00319508512809219}, {"col": "PM25", "idx": 6, "val": 0.0029675588098743537}, {"col": "NO", "idx": 6, "val": 0.0008285206573460779}, {"col": "CO", "idx": 7, "val": 0.6003176095335169}, {"col": "NO2", "idx": 7, "val": 0.0033080964357802625}, {"col": "PM10", "idx": 7, "val": 0.00340684960258264}, {"col": "PM25", "idx": 7, "val": 0.003076214149689973}, {"col": "NO", "idx": 7, "val": 0.0008349907425211407}, {"col": "CO", "idx": 8, "val": 0.6003176095335169}, {"col": "NO2", "idx": 8, "val": 0.004692941933762594}, {"col": "PM10", "idx": 8, "val": 0.00340684960258264}, {"col": "PM25", "idx": 8, "val": 0.003076214149689973}, {"col": "NO", "idx": 8, "val": 0.0009698203004319168}, {"col": "CO", "idx": 9, "val": 0.6003919364230038}, {"col": "NO2", "idx": 9, "val": 0.004078399523313965}, {"col": "PM10", "idx": 9, "val": 0.002780916586904131}, {"col": "PM25", "idx": 9, "val": 0.0029675588098743537}, {"col": "NO", "idx": 9, "val": 0.0009214416876278939}, {"col": "CO", "idx": 10, "val": 0.7625168729701334}, {"col": "NO2", "idx": 10, "val": 0.003449299387933931}, {"col": "PM10", "idx": 10, "val": 0.002828326774440601}, {"col": "PM25", "idx": 10, "val": 0.0029675588098743537}, {"col": "NO", "idx": 10, "val": 0.0009214416876278939}, {"col": "CO", "idx": 11, "val": 0.86743151707328}, {"col": "NO2", "idx": 11, "val": 0.003449299387933931}, {"col": "PM10", "idx": 11, "val": 0.002828326774440601}, {"col": "PM25", "idx": 11, "val": 0.0029675588098743537}, {"col": "NO", "idx": 11, "val": 0.0011959491638279581}]}, {"name": "stats", "source": "table", "transform": [{"keys": ["data.idx"], "type": "facet"}, {"type": "stats", "value": "data.val"}]}], "height": 200, "legends": [{"fill": "color", "offset": 0, "properties": {}, "title": "Indicators Day Forcast"}], "marks": [{"from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}, {"height": "data.val", "point": "data.idx", "type": "stack"}]}, "marks": [{"properties": {"enter": {"fill": {"field": "data.col", "scale": "color"}, "width": {"band": true, "offset": -1, "scale": "x"}, "x": {"field": "data.idx", "scale": "x"}, "y": {"field": "y", "scale": "y"}, "y2": {"field": "y2", "scale": "y"}}}, "type": "rect"}], "type": "group"}], "padding": "auto", "scales": [{"domain": {"data": "table", "field": "data.idx"}, "name": "x", "range": "width", "type": "ordinal", "zero": false}, {"domain": {"data": "stats", "field": "sum"}, "name": "y", "nice": true, "range": "height"}, {"domain": {"data": "table", "field": "data.col"}, "name": "color", "range": "category20", "type": "ordinal"}], "width": 400},vega_f9a0dd2e6a894835bf39557f98ecbbc2);
+            
+            
+        
+    
+        var marker_56bd50f6ebbd437ea4373c84ff453ecf = L.marker(
+            [55.82115400000001, 37.612592],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(map_2f4e744fbe554eff94f3c5099fcc326f);
+        
+    
+
+                var icon_4ce5c767636b49f9bf05e9a04e75e1f2 = L.AwesomeMarkers.icon({
+                    icon: 'cloud',
+                    iconColor: 'white',
+                    markerColor: 'darkblue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_56bd50f6ebbd437ea4373c84ff453ecf.setIcon(icon_4ce5c767636b49f9bf05e9a04e75e1f2);
+            
+    
+        marker_56bd50f6ebbd437ea4373c84ff453ecf.bindTooltip(
+            `<div>`
+            + `Ostankino` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+            var popup_869ee9a2ee5f4e94ae68d96a6480ab62 = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_4296434136cd484194521589d47d7468 = $(`<div id="html_4296434136cd484194521589d47d7468" style="width: 100.0%; height: 100.0%;">Hello</div>`)[0];
+                popup_869ee9a2ee5f4e94ae68d96a6480ab62.setContent(html_4296434136cd484194521589d47d7468);
+            
+                var vega_3a0623d12c1e46f39549230089c8df7a = $(`             <div id="vega_3a0623d12c1e46f39549230089c8df7a"></div>             `)[0];
+                popup_869ee9a2ee5f4e94ae68d96a6480ab62.setContent(vega_3a0623d12c1e46f39549230089c8df7a);
+            
+
+            marker_56bd50f6ebbd437ea4373c84ff453ecf.bindPopup(popup_869ee9a2ee5f4e94ae68d96a6480ab62)
+            ;
+
+            
+                
+            vega_parse({"axes": [{"scale": "x", "title": "hours", "type": "x"}, {"scale": "y", "title": "concentration", "type": "y"}], "data": [{"name": "table", "values": [{"col": "CO", "idx": 0, "val": 0.6158637099530961}, {"col": "NO2", "idx": 0, "val": 0.09573088295646512}, {"col": "PM10", "idx": 0, "val": 0.09517668211115043}, {"col": "PM2.5", "idx": 0, "val": 0.06788115441338304}, {"col": "NO", "idx": 0, "val": 0.03697032046127674}, {"col": "CO", "idx": 1, "val": 0.6158637099530961}, {"col": "NO2", "idx": 1, "val": 0.09616808701921256}, {"col": "PM10", "idx": 1, "val": 0.0797678095677166}, {"col": "PM2.5", "idx": 1, "val": 0.0676527105228087}, {"col": "NO", "idx": 1, "val": 0.025454222315862248}, {"col": "CO", "idx": 2, "val": 0.6158637099530961}, {"col": "NO2", "idx": 2, "val": 0.0832399781076317}, {"col": "PM10", "idx": 2, "val": 0.06737780902822006}, {"col": "PM2.5", "idx": 2, "val": 0.055561644582235406}, {"col": "NO", "idx": 2, "val": 0.021781299520882563}, {"col": "CO", "idx": 3, "val": 0.6204473840594427}, {"col": "NO2", "idx": 3, "val": 0.0809266948520343}, {"col": "PM10", "idx": 3, "val": 0.06712490941495103}, {"col": "PM2.5", "idx": 3, "val": 0.05382655793720745}, {"col": "NO", "idx": 3, "val": 0.021778299286189497}, {"col": "CO", "idx": 4, "val": 0.6204473840594427}, {"col": "NO2", "idx": 4, "val": 0.08190478688650306}, {"col": "PM10", "idx": 4, "val": 0.09766668300939248}, {"col": "PM2.5", "idx": 4, "val": 0.0676527105228087}, {"col": "NO", "idx": 4, "val": 0.021862651443449538}, {"col": "CO", "idx": 5, "val": 0.6309087091613228}, {"col": "NO2", "idx": 5, "val": 0.08268367035839701}, {"col": "PM10", "idx": 5, "val": 0.0981192084899802}, {"col": "PM2.5", "idx": 5, "val": 0.06585467582175132}, {"col": "NO", "idx": 5, "val": 0.0221516561338952}, {"col": "CO", "idx": 6, "val": 0.6309087091613228}, {"col": "NO2", "idx": 6, "val": 0.08284486848979045}, {"col": "PM10", "idx": 6, "val": 0.07025497080110546}, {"col": "PM2.5", "idx": 6, "val": 0.05943452371078264}, {"col": "NO", "idx": 6, "val": 0.02472087400339129}, {"col": "CO", "idx": 7, "val": 0.6309087091613228}, {"col": "NO2", "idx": 7, "val": 0.09525030753566173}, {"col": "PM10", "idx": 7, "val": 0.06773290025111044}, {"col": "PM2.5", "idx": 7, "val": 0.04525454382437705}, {"col": "NO", "idx": 7, "val": 0.02682087385479876}, {"col": "CO", "idx": 8, "val": 0.6309087091613228}, {"col": "NO2", "idx": 8, "val": 0.10885238175304374}, {"col": "PM10", "idx": 8, "val": 0.04734789901417898}, {"col": "PM2.5", "idx": 8, "val": 0.037695632063648433}, {"col": "NO", "idx": 8, "val": 0.03389377465360318}, {"col": "CO", "idx": 9, "val": 0.6155223389117784}, {"col": "NO2", "idx": 9, "val": 0.10803653587330594}, {"col": "PM10", "idx": 9, "val": 0.056043633321884063}, {"col": "PM2.5", "idx": 9, "val": 0.03689054555213488}, {"col": "NO", "idx": 9, "val": 0.04649824698870834}, {"col": "CO", "idx": 10, "val": 0.6263250350549763}, {"col": "NO2", "idx": 10, "val": 0.1075990029769152}, {"col": "PM10", "idx": 10, "val": 0.06747573395087067}, {"col": "PM2.5", "idx": 10, "val": 0.050577720762134314}, {"col": "NO", "idx": 10, "val": 0.04849541931338807}, {"col": "CO", "idx": 11, "val": 0.9049167923931388}, {"col": "NO2", "idx": 11, "val": 0.10713892492105663}, {"col": "PM10", "idx": 11, "val": 0.06747573395087067}, {"col": "PM2.5", "idx": 11, "val": 0.05032873051231557}, {"col": "NO", "idx": 11, "val": 0.06412609566783213}]}, {"name": "stats", "source": "table", "transform": [{"keys": ["data.idx"], "type": "facet"}, {"type": "stats", "value": "data.val"}]}], "height": 200, "legends": [{"fill": "color", "offset": 0, "properties": {}, "title": "Indicators Day Forcast"}], "marks": [{"from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}, {"height": "data.val", "point": "data.idx", "type": "stack"}]}, "marks": [{"properties": {"enter": {"fill": {"field": "data.col", "scale": "color"}, "width": {"band": true, "offset": -1, "scale": "x"}, "x": {"field": "data.idx", "scale": "x"}, "y": {"field": "y", "scale": "y"}, "y2": {"field": "y2", "scale": "y"}}}, "type": "rect"}], "type": "group"}], "padding": "auto", "scales": [{"domain": {"data": "table", "field": "data.idx"}, "name": "x", "range": "width", "type": "ordinal", "zero": false}, {"domain": {"data": "stats", "field": "sum"}, "name": "y", "nice": true, "range": "height"}, {"domain": {"data": "table", "field": "data.col"}, "name": "color", "range": "category20", "type": "ordinal"}], "width": 400},vega_3a0623d12c1e46f39549230089c8df7a);
+            
+            
+        
+    
+        var marker_92471571d8194621a2efcd9445a98b43 = L.marker(
+            [55.635129000000006, 37.658684],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(map_2f4e744fbe554eff94f3c5099fcc326f);
+        
+    
+
+                var icon_f6893cdb01c04879af1b37d59006aa11 = L.AwesomeMarkers.icon({
+                    icon: 'cloud',
+                    iconColor: 'white',
+                    markerColor: 'darkblue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_92471571d8194621a2efcd9445a98b43.setIcon(icon_f6893cdb01c04879af1b37d59006aa11);
+            
+    
+        marker_92471571d8194621a2efcd9445a98b43.bindTooltip(
+            `<div>`
+            + `Proletarskiy Prospect` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+            var popup_0f69730a0dea40a08f53264a1af8ac28 = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_b76709ecae6946d2a184a20806e5b51a = $(`<div id="html_b76709ecae6946d2a184a20806e5b51a" style="width: 100.0%; height: 100.0%;">Hello</div>`)[0];
+                popup_0f69730a0dea40a08f53264a1af8ac28.setContent(html_b76709ecae6946d2a184a20806e5b51a);
+            
+                var vega_95526aa257864961a98f02fa630b3baa = $(`             <div id="vega_95526aa257864961a98f02fa630b3baa"></div>             `)[0];
+                popup_0f69730a0dea40a08f53264a1af8ac28.setContent(vega_95526aa257864961a98f02fa630b3baa);
+            
+
+            marker_92471571d8194621a2efcd9445a98b43.bindPopup(popup_0f69730a0dea40a08f53264a1af8ac28)
+            ;
+
+            
+                
+            vega_parse({"axes": [{"scale": "x", "title": "hours", "type": "x"}, {"scale": "y", "title": "concentration", "type": "y"}], "data": [{"name": "table", "values": [{"col": "CO", "idx": 0, "val": 0.3423253476921792}, {"col": "NO2", "idx": 0, "val": 0.07465372567259941}, {"col": "PM10", "idx": 0, "val": 0.06383574231706922}, {"col": "PM2.5", "idx": 0, "val": 0.04998718106412822}, {"col": "NO", "idx": 0, "val": 0.008559057590287406}, {"col": "CO", "idx": 1, "val": 0.2343822731537404}, {"col": "NO2", "idx": 1, "val": 0.07497299758303774}, {"col": "PM10", "idx": 1, "val": 0.06146706531220932}, {"col": "PM2.5", "idx": 1, "val": 0.045747186327303166}, {"col": "NO", "idx": 1, "val": 0.004583101409128414}, {"col": "CO", "idx": 2, "val": 0.2532229239756536}, {"col": "NO2", "idx": 2, "val": 0.07599911015550195}, {"col": "PM10", "idx": 2, "val": 0.0475765576802182}, {"col": "PM2.5", "idx": 2, "val": 0.04586588540495643}, {"col": "NO", "idx": 2, "val": 0.006449209718216279}, {"col": "CO", "idx": 3, "val": 0.21272842875026776}, {"col": "NO2", "idx": 3, "val": 0.07481613321007757}, {"col": "PM10", "idx": 3, "val": 0.0616135468930596}, {"col": "PM2.5", "idx": 3, "val": 0.049882785706169816}, {"col": "NO", "idx": 3, "val": 0.004095808622808467}, {"col": "CO", "idx": 4, "val": 0.11543952746034924}, {"col": "NO2", "idx": 4, "val": 0.06630853173157053}, {"col": "PM10", "idx": 4, "val": 0.06318481500101426}, {"col": "PM2.5", "idx": 4, "val": 0.045775769390960605}, {"col": "NO", "idx": 4, "val": 0.001088994326213108}, {"col": "CO", "idx": 5, "val": 0.1108926402701076}, {"col": "NO2", "idx": 5, "val": 0.056374115902849034}, {"col": "PM10", "idx": 5, "val": 0.04912455780848962}, {"col": "PM2.5", "idx": 5, "val": 0.04616710748673696}, {"col": "NO", "idx": 5, "val": 0.004830483339739245}, {"col": "CO", "idx": 6, "val": 0.11779574259541326}, {"col": "NO2", "idx": 6, "val": 0.06541828501714936}, {"col": "PM10", "idx": 6, "val": 0.049326570466486995}, {"col": "PM2.5", "idx": 6, "val": 0.046303730513337416}, {"col": "NO", "idx": 6, "val": 0.013372914318684738}, {"col": "CO", "idx": 7, "val": 0.1406574481077847}, {"col": "NO2", "idx": 7, "val": 0.0660446274669862}, {"col": "PM10", "idx": 7, "val": 0.047775030551226234}, {"col": "PM2.5", "idx": 7, "val": 0.04093619288279075}, {"col": "NO", "idx": 7, "val": 0.007753532866201135}, {"col": "CO", "idx": 8, "val": 0.1388914964302359}, {"col": "NO2", "idx": 8, "val": 0.0738010082064347}, {"col": "PM10", "idx": 8, "val": 0.04819118641117622}, {"col": "PM2.5", "idx": 8, "val": 0.04053811808964149}, {"col": "NO", "idx": 8, "val": 0.010610392393709495}, {"col": "CO", "idx": 9, "val": 0.19894464066238915}, {"col": "NO2", "idx": 9, "val": 0.07395672522558955}, {"col": "PM10", "idx": 9, "val": 0.06388936075679584}, {"col": "PM2.5", "idx": 9, "val": 0.04592260619535344}, {"col": "NO", "idx": 9, "val": 0.012806312284183892}, {"col": "CO", "idx": 10, "val": 0.28795587117217525}, {"col": "NO2", "idx": 10, "val": 0.07311843798992869}, {"col": "PM10", "idx": 10, "val": 0.05679775186584773}, {"col": "PM2.5", "idx": 10, "val": 0.04294060774890003}, {"col": "NO", "idx": 10, "val": 0.013375551351372222}, {"col": "CO", "idx": 11, "val": 0.4475070846746104}, {"col": "NO2", "idx": 11, "val": 0.07194126884579755}, {"col": "PM10", "idx": 11, "val": 0.057040314872059135}, {"col": "PM2.5", "idx": 11, "val": 0.04270328645008255}, {"col": "NO", "idx": 11, "val": 0.02301742872988033}, {"col": "CO", "idx": 12, "val": 0.4441049673769453}, {"col": "NO2", "idx": 12, "val": 0.0975308524478711}, {"col": "PM10", "idx": 12, "val": 0.07357805903409675}, {"col": "PM2.5", "idx": 12, "val": 0.05899983993360576}, {"col": "NO", "idx": 12, "val": 0.035125646192341126}]}, {"name": "stats", "source": "table", "transform": [{"keys": ["data.idx"], "type": "facet"}, {"type": "stats", "value": "data.val"}]}], "height": 200, "legends": [{"fill": "color", "offset": 0, "properties": {}, "title": "Indicators Day Forcast"}], "marks": [{"from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}, {"height": "data.val", "point": "data.idx", "type": "stack"}]}, "marks": [{"properties": {"enter": {"fill": {"field": "data.col", "scale": "color"}, "width": {"band": true, "offset": -1, "scale": "x"}, "x": {"field": "data.idx", "scale": "x"}, "y": {"field": "y", "scale": "y"}, "y2": {"field": "y2", "scale": "y"}}}, "type": "rect"}], "type": "group"}], "padding": "auto", "scales": [{"domain": {"data": "table", "field": "data.idx"}, "name": "x", "range": "width", "type": "ordinal", "zero": false}, {"domain": {"data": "stats", "field": "sum"}, "name": "y", "nice": true, "range": "height"}, {"domain": {"data": "table", "field": "data.col"}, "name": "color", "range": "category20", "type": "ordinal"}], "width": 400},vega_95526aa257864961a98f02fa630b3baa);
+            
+            
+        
+    
+        var marker_e281120d2ff8466c8752a41a5ada11c1 = L.marker(
+            [55.652695, 37.751502],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(map_2f4e744fbe554eff94f3c5099fcc326f);
+        
+    
+
+                var icon_9b27c59fcf0443dab388bc920c45a2b4 = L.AwesomeMarkers.icon({
+                    icon: 'cloud',
+                    iconColor: 'white',
+                    markerColor: 'darkblue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_e281120d2ff8466c8752a41a5ada11c1.setIcon(icon_9b27c59fcf0443dab388bc920c45a2b4);
+            
+    
+        marker_e281120d2ff8466c8752a41a5ada11c1.bindTooltip(
+            `<div>`
+            + `Maryino Dct.` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+            var popup_3c0712b986df419584c4b9ffd1f04ecd = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_5922132638ea45ea8a7273d2d755308c = $(`<div id="html_5922132638ea45ea8a7273d2d755308c" style="width: 100.0%; height: 100.0%;">Hello</div>`)[0];
+                popup_3c0712b986df419584c4b9ffd1f04ecd.setContent(html_5922132638ea45ea8a7273d2d755308c);
+            
+                var vega_aa157905a06941778d2c40e9c59a8b74 = $(`             <div id="vega_aa157905a06941778d2c40e9c59a8b74"></div>             `)[0];
+                popup_3c0712b986df419584c4b9ffd1f04ecd.setContent(vega_aa157905a06941778d2c40e9c59a8b74);
+            
+
+            marker_e281120d2ff8466c8752a41a5ada11c1.bindPopup(popup_3c0712b986df419584c4b9ffd1f04ecd)
+            ;
+
+            
+                
+            vega_parse({"axes": [{"scale": "x", "title": "hours", "type": "x"}, {"scale": "y", "title": "concentration", "type": "y"}], "data": [{"name": "table", "values": [{"col": "NO2", "idx": 0, "val": 0.11921838593674758}, {"col": "CO", "idx": 0, "val": 0.5394994268883567}, {"col": "PM10", "idx": 0, "val": 0.00020963549622825264}, {"col": "NO", "idx": 0, "val": 0.034115680090800134}, {"col": "NO2", "idx": 1, "val": 0.10549317472325777}, {"col": "CO", "idx": 1, "val": 0.5637248674711935}, {"col": "PM10", "idx": 1, "val": -0.0006784985817881728}, {"col": "NO", "idx": 1, "val": 0.01917818103019423}, {"col": "NO2", "idx": 2, "val": 0.11811889294299648}, {"col": "CO", "idx": 2, "val": 0.5693716428375166}, {"col": "PM10", "idx": 2, "val": 0.00015712209315389689}, {"col": "NO", "idx": 2, "val": 0.034353814836981834}, {"col": "NO2", "idx": 3, "val": 0.10586957294915213}, {"col": "CO", "idx": 3, "val": 0.5678436739797827}, {"col": "PM10", "idx": 3, "val": -0.001303859729003362}, {"col": "NO", "idx": 3, "val": 0.019364506786889574}, {"col": "NO2", "idx": 4, "val": 0.1033296574444663}, {"col": "CO", "idx": 4, "val": 0.5673354206890593}, {"col": "PM10", "idx": 4, "val": 0.0020297570625369965}, {"col": "NO", "idx": 4, "val": 0.012685044280399052}, {"col": "NO2", "idx": 5, "val": 0.08366807041609152}, {"col": "CO", "idx": 5, "val": 0.3739155132059431}, {"col": "PM10", "idx": 5, "val": 0.0033564594181228896}, {"col": "NO", "idx": 5, "val": 0.0069411036739398845}, {"col": "NO2", "idx": 6, "val": 0.1010190196071092}, {"col": "CO", "idx": 6, "val": 0.5166879847143621}, {"col": "PM10", "idx": 6, "val": 0.003308830604240448}, {"col": "NO", "idx": 6, "val": 0.013242733479199166}, {"col": "NO2", "idx": 7, "val": 0.10419971793118307}, {"col": "CO", "idx": 7, "val": 0.5835554589858235}, {"col": "PM10", "idx": 7, "val": 0.0017391444741613955}, {"col": "NO", "idx": 7, "val": 0.012901714524758672}, {"col": "NO2", "idx": 8, "val": 0.11395099554356868}, {"col": "CO", "idx": 8, "val": 0.579693304773476}, {"col": "PM10", "idx": 8, "val": 0.0022974160493632392}, {"col": "NO", "idx": 8, "val": 0.02036671918275004}, {"col": "NO2", "idx": 9, "val": 0.11949775779280268}, {"col": "CO", "idx": 9, "val": 0.5783892975746863}, {"col": "PM10", "idx": 9, "val": 0.0016581977886618929}, {"col": "NO", "idx": 9, "val": 0.034528113154672524}, {"col": "NO2", "idx": 10, "val": 0.11930227738208125}, {"col": "CO", "idx": 10, "val": 0.5732364068602941}, {"col": "PM10", "idx": 10, "val": 0.0020056161856383745}, {"col": "NO", "idx": 10, "val": 0.03478399099819387}, {"col": "NO2", "idx": 11, "val": 0.11875305347512953}, {"col": "CO", "idx": 11, "val": 0.5894062693408153}, {"col": "PM10", "idx": 11, "val": 0.0018353658844051032}, {"col": "NO", "idx": 11, "val": 0.034713220465507996}, {"col": "NO2", "idx": 12, "val": 0.1208700534449719}, {"col": "CO", "idx": 12, "val": 0.8582534396169749}, {"col": "PM10", "idx": 12, "val": -0.0003443527996810705}, {"col": "NO", "idx": 12, "val": 0.04665550979920631}]}, {"name": "stats", "source": "table", "transform": [{"keys": ["data.idx"], "type": "facet"}, {"type": "stats", "value": "data.val"}]}], "height": 200, "legends": [{"fill": "color", "offset": 0, "properties": {}, "title": "Indicators Day Forcast"}], "marks": [{"from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}, {"height": "data.val", "point": "data.idx", "type": "stack"}]}, "marks": [{"properties": {"enter": {"fill": {"field": "data.col", "scale": "color"}, "width": {"band": true, "offset": -1, "scale": "x"}, "x": {"field": "data.idx", "scale": "x"}, "y": {"field": "y", "scale": "y"}, "y2": {"field": "y2", "scale": "y"}}}, "type": "rect"}], "type": "group"}], "padding": "auto", "scales": [{"domain": {"data": "table", "field": "data.idx"}, "name": "x", "range": "width", "type": "ordinal", "zero": false}, {"domain": {"data": "stats", "field": "sum"}, "name": "y", "nice": true, "range": "height"}, {"domain": {"data": "table", "field": "data.col"}, "name": "color", "range": "category20", "type": "ordinal"}], "width": 400},vega_aa157905a06941778d2c40e9c59a8b74);
+            
+            
+        
+    
+        var marker_41edca77a9e44a73acb130e5e0c82b93 = L.marker(
+            [55.715698, 37.6052377],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(map_2f4e744fbe554eff94f3c5099fcc326f);
+        
+    
+
+                var icon_dcced9eb5d894d829b2d693657b24654 = L.AwesomeMarkers.icon({
+                    icon: 'cloud',
+                    iconColor: 'white',
+                    markerColor: 'darkblue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_41edca77a9e44a73acb130e5e0c82b93.setIcon(icon_dcced9eb5d894d829b2d693657b24654);
+            
+    
+        marker_41edca77a9e44a73acb130e5e0c82b93.bindTooltip(
+            `<div>`
+            + `Shabolovka St.` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+            var popup_6130294dad854017a56cdbc26fcfa16d = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_0f3f844b74704cb6a2dbcab378eaf338 = $(`<div id="html_0f3f844b74704cb6a2dbcab378eaf338" style="width: 100.0%; height: 100.0%;">Hello</div>`)[0];
+                popup_6130294dad854017a56cdbc26fcfa16d.setContent(html_0f3f844b74704cb6a2dbcab378eaf338);
+            
+                var vega_89e3fc00b52f431e808f713b37b15c79 = $(`             <div id="vega_89e3fc00b52f431e808f713b37b15c79"></div>             `)[0];
+                popup_6130294dad854017a56cdbc26fcfa16d.setContent(vega_89e3fc00b52f431e808f713b37b15c79);
+            
+
+            marker_41edca77a9e44a73acb130e5e0c82b93.bindPopup(popup_6130294dad854017a56cdbc26fcfa16d)
+            ;
+
+            
+                
+            vega_parse({"axes": [{"scale": "x", "title": "hours", "type": "x"}, {"scale": "y", "title": "concentration", "type": "y"}], "data": [{"name": "table", "values": [{"col": "NO2", "idx": 0, "val": 0.11921838593674758}, {"col": "CO", "idx": 0, "val": 0.5394994268883567}, {"col": "PM10", "idx": 0, "val": 0.00020963549622825264}, {"col": "NO", "idx": 0, "val": 0.034115680090800134}, {"col": "NO2", "idx": 1, "val": 0.10549317472325777}, {"col": "CO", "idx": 1, "val": 0.5637248674711935}, {"col": "PM10", "idx": 1, "val": -0.0006784985817881728}, {"col": "NO", "idx": 1, "val": 0.01917818103019423}, {"col": "NO2", "idx": 2, "val": 0.11811889294299648}, {"col": "CO", "idx": 2, "val": 0.5693716428375166}, {"col": "PM10", "idx": 2, "val": 0.00015712209315389689}, {"col": "NO", "idx": 2, "val": 0.034353814836981834}, {"col": "NO2", "idx": 3, "val": 0.10586957294915213}, {"col": "CO", "idx": 3, "val": 0.5678436739797827}, {"col": "PM10", "idx": 3, "val": -0.001303859729003362}, {"col": "NO", "idx": 3, "val": 0.019364506786889574}, {"col": "NO2", "idx": 4, "val": 0.1033296574444663}, {"col": "CO", "idx": 4, "val": 0.5673354206890593}, {"col": "PM10", "idx": 4, "val": 0.0020297570625369965}, {"col": "NO", "idx": 4, "val": 0.012685044280399052}, {"col": "NO2", "idx": 5, "val": 0.08366807041609152}, {"col": "CO", "idx": 5, "val": 0.3739155132059431}, {"col": "PM10", "idx": 5, "val": 0.0033564594181228896}, {"col": "NO", "idx": 5, "val": 0.0069411036739398845}, {"col": "NO2", "idx": 6, "val": 0.1010190196071092}, {"col": "CO", "idx": 6, "val": 0.5166879847143621}, {"col": "PM10", "idx": 6, "val": 0.003308830604240448}, {"col": "NO", "idx": 6, "val": 0.013242733479199166}, {"col": "NO2", "idx": 7, "val": 0.10419971793118307}, {"col": "CO", "idx": 7, "val": 0.5835554589858235}, {"col": "PM10", "idx": 7, "val": 0.0017391444741613955}, {"col": "NO", "idx": 7, "val": 0.012901714524758672}, {"col": "NO2", "idx": 8, "val": 0.11395099554356868}, {"col": "CO", "idx": 8, "val": 0.579693304773476}, {"col": "PM10", "idx": 8, "val": 0.0022974160493632392}, {"col": "NO", "idx": 8, "val": 0.02036671918275004}, {"col": "NO2", "idx": 9, "val": 0.11949775779280268}, {"col": "CO", "idx": 9, "val": 0.5783892975746863}, {"col": "PM10", "idx": 9, "val": 0.0016581977886618929}, {"col": "NO", "idx": 9, "val": 0.034528113154672524}, {"col": "NO2", "idx": 10, "val": 0.11930227738208125}, {"col": "CO", "idx": 10, "val": 0.5732364068602941}, {"col": "PM10", "idx": 10, "val": 0.0020056161856383745}, {"col": "NO", "idx": 10, "val": 0.03478399099819387}, {"col": "NO2", "idx": 11, "val": 0.11875305347512953}, {"col": "CO", "idx": 11, "val": 0.5894062693408153}, {"col": "PM10", "idx": 11, "val": 0.0018353658844051032}, {"col": "NO", "idx": 11, "val": 0.034713220465507996}, {"col": "NO2", "idx": 12, "val": 0.1208700534449719}, {"col": "CO", "idx": 12, "val": 0.8582534396169749}, {"col": "PM10", "idx": 12, "val": -0.0003443527996810705}, {"col": "NO", "idx": 12, "val": 0.04665550979920631}]}, {"name": "stats", "source": "table", "transform": [{"keys": ["data.idx"], "type": "facet"}, {"type": "stats", "value": "data.val"}]}], "height": 200, "legends": [{"fill": "color", "offset": 0, "properties": {}, "title": "Indicators Day Forcast"}], "marks": [{"from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}, {"height": "data.val", "point": "data.idx", "type": "stack"}]}, "marks": [{"properties": {"enter": {"fill": {"field": "data.col", "scale": "color"}, "width": {"band": true, "offset": -1, "scale": "x"}, "x": {"field": "data.idx", "scale": "x"}, "y": {"field": "y", "scale": "y"}, "y2": {"field": "y2", "scale": "y"}}}, "type": "rect"}], "type": "group"}], "padding": "auto", "scales": [{"domain": {"data": "table", "field": "data.idx"}, "name": "x", "range": "width", "type": "ordinal", "zero": false}, {"domain": {"data": "stats", "field": "sum"}, "name": "y", "nice": true, "range": "height"}, {"domain": {"data": "table", "field": "data.col"}, "name": "color", "range": "category20", "type": "ordinal"}], "width": 400},vega_89e3fc00b52f431e808f713b37b15c79);
+            
+            
+        
+</script>
