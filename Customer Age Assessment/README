@@ -1,1 +1,9 @@
+# Customer Age Assessment
 
+@inproceedings{agustsson2017appareal,
+  title={Apparent and real age estimation in still images with deep residual regressors on APPA-REAL database.},
+  author={E Agustsson, R Timofte, S Escalera, X Baro, I Guyon, R Rothe.},
+  booktitle={12th IEEE International Conference and Workshops on Automatic Face and Gesture Recognition (FG), 2017},
+  year={2017},
+  organization={IEEE}
+}
