@@ -4,7 +4,7 @@ Telecom operator wants to predict a possible leak of it's clients. Company will 
 
 Also we'll find time after that probability of loosing client increases significantly.
 
-And in additional project 
+And in additional part will draw the portreit of client who's going to get out.
 
 ### Models
 - CatBoostClassifier
