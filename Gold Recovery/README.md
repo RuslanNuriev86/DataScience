@@ -10,3 +10,17 @@ Thecnological process has two main stages:
 - primary and secondary cleaning. After this procedure we have final gold particles and new tails.
 
 This exploration we'll find out if machine learning model on base of input parameters could help improve gold extraction process, make it more efficiently.
+
+### Models
+- CatBoostClassifier
+
+### Usage
+First of all you should upgrade seaborn
+
+```
+!pip install seaborn --upgrade
+```
+
+### Requirements
+
+python 3
