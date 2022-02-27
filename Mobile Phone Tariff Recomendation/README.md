@@ -5,6 +5,8 @@ Source: world-today-news.com
 
 In our possesion information about mobile operator clients that use "Ultra" and "Smart" tariffs. We need to build model to recommend to customers optimal for them tariff. Model Accuracy hos to be not less than 0.75.
 
+In this project we've built DecisionTreeClassifier, RandomForestClassifier, LogisticRegression models to give tariff recomendation to mobile operator customers.
+
 ### Models
 - LinearRegression
 - DecisionTreeClassifier
