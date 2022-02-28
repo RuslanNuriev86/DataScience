@@ -6,7 +6,7 @@ Source: fraedom.com
 
 Bank's clients start to leak every month. Not so much, but significantly. Market analysts found out that to save actual customers is cheaper than bring new ones. In this project we'll builld model to predict whether client is going to leave or not. In our possesion information about clients, their behavior and services they use. To evaluate model performance we'll use f1 score and set it's treshold on 0.59. Additionaly we will calculate AUC-ROC metric. Then compare both.
 
-During this project we'll have to handle classes imbalance in few ways. So we can compare their efficiency and found out wich one is most fittable in this case.
+During this project we'll have to handle classes imbalance in few ways. So we can compare their efficiency and found out wich one is most fittable in this case. Also we'll see which of features have most importance on prediction. 
 
 ### Models
 - LogisticRegression
