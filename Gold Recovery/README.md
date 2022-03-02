@@ -9,7 +9,7 @@ Thecnological process has two main stages:
 - flotation (process for selectively separating of hydrophobic materials from hydrophilic). At this stage rougher feed brings to the tank with a liquid. On issue it has refractory ore for further gold recovery treatment and tails.
 - primary and secondary cleaning. After this procedure we have final gold particles and new tails.
 
-This exploration we'll find out if machine learning model on base of input parameters could help improve gold extraction process, make it more efficiently.
+During exploration we'll find out if machine learning model could help to improve gold extraction process, make it more efficiently.
 
 ### Models
 - CatBoostClassifier
