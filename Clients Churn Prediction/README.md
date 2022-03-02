@@ -4,7 +4,7 @@ Telecom operator wants to predict a possible leak of it's clients. Company will 
 
 Also we'll find time after that probability of loosing client increases significantly.
 
-And in additional part will draw the portreit of client who's going to get out.
+And in additional part we will draw the portreit of client who's going to get out.
 
 ![monthly](https://user-images.githubusercontent.com/92801594/153714028-a76b1f99-6277-4bd6-b552-6396891ede1b.jpg)
 
