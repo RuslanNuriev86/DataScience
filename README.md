@@ -64,3 +64,5 @@ We have a taxi orders data for few months of 2018. In porpouse to avoid drivers 
 # The Most Profitablle Oil Region
 This project is dedicated to oil industry. We need to find a location for drilling new boreholes. In our possesion oil samples from the three regions. Quality of oil and value of reservoirs were measured in 10 000 borehols in each of them. We need to build a model to find out wich region will bring the most profit, make profitability and risk assesment via bootstrap technique.
 
+![bdcbbc9162494286b2a4c3ce0eb41dc4-0001](https://user-images.githubusercontent.com/92801594/156614895-c88a47a3-16b0-4e47-b853-709486f598d3.jpg)
+![bdcbbc9162494286b2a4c3ce0eb41dc4-0002](https://user-images.githubusercontent.com/92801594/156615124-d1a78351-7912-4ba5-862d-03143b0e9b0e.jpg)
