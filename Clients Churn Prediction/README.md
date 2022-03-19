@@ -18,7 +18,7 @@ First of all you should install catboost, shap
 
 ```
 !pip install catboost
-!pip install lightgbm
+!pip install shap
 ```
 
 ### Requirements
