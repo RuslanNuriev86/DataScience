@@ -50,6 +50,11 @@ In this project we'll draw typical porteits of users of both tariffs and test so
 # NLP Telegram bot
 In purpose to help DS students to learn more about NLP and have some fun I developed thematic Telegram chat bot. It answers questions about modern methods of word vectorization such as BERT and GPT3.
 
+# Gym Mountain Car via TensorFlow
+Here is the one-dimensional game from OpenAi Gym which goal is get the car on the mountain tip https://gym.openai.com/envs/MountainCar-v0/ The car is not powerful enough to scale the mountain in a single pass. So we need to drive it back and forth to build up momentum. To solve this task we going to build a simple neural network with TensorFlow.
+
+https://github.com/RuslanNuriev86/DataScience/tree/main/RL%20Gym%20Mountain%20Car
+
 # Real Estate Price Analisys
 In our possesion are real estate ads from St. Petersburg and neighborhoods for few years. In this project we are going to analyze building markets and determine an average price. It'll help to detect anomalies and scams.
 Also we'll find out what the most important factors of price are and differences between properties in city center and other locations.
