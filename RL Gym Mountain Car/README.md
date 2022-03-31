@@ -5,7 +5,8 @@
 Here is the one-dimensional game from OpenAi Gym which goal is get the car on the mountain tip https://gym.openai.com/envs/MountainCar-v0/ The car is not powerful enough to scale the mountain in a single pass. So we need to drive it back and forth to build up momentum. To solve this task we going to build a simple neural network with TensorFlow.
 
 You can check how cool model is here https://youtu.be/qcU7YvZYKe4
-Agen is trying to cheat here https://youtu.be/LCGJdc-wP24
+
+Agent is trying to cheat here https://youtu.be/LCGJdc-wP24
 
 ### Models
 - Sequential Neural Network From TnsorFlow
