@@ -28,6 +28,11 @@ In this project we need to predict the best selling computer games for the next 
 
 We'll draw typical portreits of American, European and Japanees gamers, determine the most popular and the most profitable genres, and find out if users and critics feedbacks influent on sellings. 
 
+# Crypto App Reviews Sentiment Analysis
+In this project we analyze user reviews of 10 of the most popular crypto related mobile apps (Google play store in this case). We provide some sentiment analysis. Check correlation between scores and sentiments of user reviews. And figure out which feelings prevails (and give some thought about what that means). At the end I left a summary of the project.
+
+https://github.com/RuslanNuriev86/DataScience/tree/main/Crypto%20App%20Reviews%20Sentiment%20Analysis
+
 # Customer Age Assessment
 A grocery store deploys computer vision system for customer photo analysis. So our goal is to learn a model to assess an age of buyers. It'll help company to control alcohol sellings and recommend to customers other items depends on their age group
 
